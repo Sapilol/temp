@@ -1,5 +1,6 @@
 # Generic skeleton
 
+```cpp
 // <-------------------------------------------Libraries------------------------------------>
 #include <iostream>
 #include <cstdio>
@@ -289,9 +290,10 @@ int32_t main() {
     }
     return 0;
 }
-
+```
 
 # Precomputing nCr when I need to return modulo mod answer
+```cpp
 vector<Mint> fact, invfact;
 int fact_computed = 0;
 
@@ -329,9 +331,11 @@ Mint multi(int x, const vector<int> &y) {
     }
     return res;
 }
+```
 
 
 # To find the nCr
+```cpp
 // nCr function
 // Time Complexity : O(r)
 long long nCr(int n, int r) {
@@ -342,9 +346,10 @@ long long nCr(int n, int r) {
     }
     return res;
 }
-
+```
 
 # Disjoint Set Union (Union-Find)
+```cpp
 // Disjoint Set Union (Union - Find)
 // Helps join two groups and find the parent (representative) of a group fast.
 class DSU {
@@ -423,9 +428,10 @@ public:
         return minElement[n];
     }
 };
-
+```
 
 # Modular Int Operations
+```cpp
 /*
     Modular Arithmetic Operations (ModInt)
     Source :
@@ -528,8 +534,10 @@ void genComb(int n) {
         }
     }
 }
+```
 
 # Snippet for debugging
+```cpp
 // <------------------------------------Debugging Macros for Conditional Output during Development---------------------------------->
 #ifndef ONLINE_JUDGE
     #define debug(x)        cerr << #x << " = " << (x) << "\n"
@@ -554,9 +562,10 @@ void genComb(int n) {
     #define debug_map(m)    do {} while (0)
 #endif
 // <------------------------------------------------------Debugging ends --------------------------------------------------------->
-
+```
 
 # Modular Functions
+```cpp
 long long mod_pow(long long a, long long b, long long m = mod) {
     long long res = 1;
     while (b) {
@@ -586,9 +595,11 @@ long long mod_mul(long long a, long long b, long long m = mod) {
 long long mod_div(long long a, long long b, long long m = mod) {
     return mod_mul(a, mod_inv(b, m), m);
 }
+```
 
 
 Safe hash map to avoid collisions
+```cpp
 // Custom hash function
 struct custom_hash {
     static uint64_t splitmix64(uint64_t x) noexcept {
@@ -624,9 +635,10 @@ struct custom_hash {
 
 template<typename K, typename V>
 using umap = unordered_map<K, V, custom_hash>;
-
+```
 
 # For problems dealing with mex
+```cpp
 struct Mex {
     set<int> missing;               // Stores all potential mex values
     unordered_map<int, int> freq;   // Frequency of each element in the current set
@@ -654,9 +666,11 @@ struct Mex {
         return *missing.begin();
     }
 };
+```
 
 
 # Kruskal's Minimum Spanning Tree
+```cpp
 /*
 Kruskal's Minimum Spanning Tree Using DSU
 For the edges vector : Create a vector<vector<int>> and just push back 
@@ -695,9 +709,11 @@ int kruskalMST(int vertexCount, vector<vector<int>> &edges) {
 
     return totalWeight;
 }
+```
 
 
 # Sieve of Eratosthenes
+```cpp
 vector<bool> prime;
 void SieveOfEratosthenes(long long n) {
     prime = vector<bool>(n + 1, true);
@@ -709,9 +725,10 @@ void SieveOfEratosthenes(long long n) {
         }
     }
 }
-
+```
 
 # PBDS Template
+```cpp
 // Policy Based Data Structures (PBDS)
 #undef int // disables above #define int ll temporarily
 #include <ext/pb_ds/assoc_container.hpp>
@@ -749,9 +766,10 @@ Quick usage notes:
     - ordered_map<Key,Value> om; om.insert({k,v}); om.order_of_key(k);
     - gp_hash_table<K,V> gph; gph.emplace(k,v); gph.find(k);
 */
-
+```
 
 # Miller Rabin Primality Test
+```cpp
 // Miller-Rabin Primality Test [Deterministic for 64-bit numbers]
 // Time Complexity: O(log n)
 int binpower(int base, int e, int mod) { 
@@ -797,9 +815,10 @@ bool MillerRabin(int n) { // returns true if n is prime, else returns false.
     }
     return true;
 }
-
+```
 
 # Mobius Function Computation
+```cpp
 // Möbius Function Computation
 // Time Complexity: O(n log log n)
 void computeMobius(int n, vector<int>& mu) {
@@ -820,9 +839,11 @@ void computeMobius(int n, vector<int>& mu) {
         }
     }
 }
+```
 
 
 # Segment Tree for sum queries
+```cpp
 // Segment Tree (Range Sum)
 // Used to perform Range Sum Queries, range add updates using lazy propogation.
 class SegmentTree_Sum {
@@ -891,9 +912,11 @@ public:
              + query(node * 2 + 1, mid + 1, end, max(l, mid + 1), r);
     }
 };
+```
 
 
 # 2nd Segment Tree
+```cpp
 class SegmentTree_Sum {
 public:
     int n;
@@ -981,9 +1004,11 @@ public:
              + queryRange(node * 2 + 1, mid + 1, end, l, r);
     }
 };
+```
 
 
 # Segment Tree for min queries
+```cpp
 // Segment Tree (Range Min)
 // Used to perform Range Min Queries and updates.
 class SegmentTree_Min {
@@ -1033,9 +1058,11 @@ public:
         );
     }
 };
+```
 
 
 # Segment Tree for max queries
+```cpp
 // Segment Tree (Range Max)
 // Used to perform Range Max Queries and updates.
 class SegmentTree_Max {
@@ -1095,9 +1122,11 @@ public:
         return first_greater(2 * idx + 1, mid + 1, r, x);
     }
 };
+```
 
 
 # Segment Tree for xor queries
+```cpp
 // Segment Tree (Range XOR)
 // Used to perform Range XOR Queries and updates.
 class SegmentTree_XOR {
@@ -1145,9 +1174,10 @@ public:
              ^ query(node * 2 + 1, mid + 1, end, max(l, mid + 1), r);
     }
 };
-
+```
 
 # Segment Tree for gcd queries
+```cpp
 // Segment Tree (Range Gcd)
 // Used to perform Range Gcd Queries and updates.
 class SegmentTree_GCD {
@@ -1197,9 +1227,10 @@ public:
         );
     }
 };
-
+```
 
 # Segment Tree for lcm queries
+```cpp
 // Segment Tree (Range Lcm)
 // Used to perform Range Lcm Queries and updates.
 class SegmentTree_LCM {
@@ -1254,9 +1285,11 @@ public:
         );
     }
 };
+```
 
 
 # Segment Tree for or queries
+```cpp
 // Segment Tree (Range OR)
 // Used to perform Range OR Queries and updates.
 class SegmentTree_OR {
@@ -1304,9 +1337,10 @@ public:
              | query(node * 2 + 1, mid + 1, end, max(l, mid + 1), r);
     }
 };
-
+```
 
 # Segment Tree for and queries
+```cpp
 // Segment Tree (Range AND)
 // Used to perform Range AND Queries and updates.
 class SegmentTree_AND {
@@ -1354,9 +1388,10 @@ public:
              & query(node * 2 + 1, mid + 1, end, max(l, mid + 1), r);
     }
 };
-
+```
 
 # Used to perform maximum subarray sum queries with point updates.
+```cpp
 // Segment Tree (Maximum Subarray Sum)
 // Used to perform maximum subarray sum queries with point updates.
 class SegmentTree_MaxSubarray {
@@ -1435,8 +1470,10 @@ public:
         return merge(left, right);
     }
 };
+```
 
 # Feasible LCM Template to avoid overflow.
+```cpp
 long long modpow(long long a, long long e, long long mod = 1e9 + 7) {
     long long r = 1;
     while (e) {
@@ -1475,9 +1512,10 @@ long long lcm_mod(const vector<long long>& arr, long long mod = 1e9 + 7) {
     }
     return ans;
 }
-
+```
 
 # Extended GCD/Euclidean Algorithm
+```cpp
 // Extended GCD/Euclidean Algorithm :
 // Its used to :
 //  1. Find x, y for eqns where => ax + by = gcd(a, b)
@@ -1496,9 +1534,10 @@ long long extendedGCD(long long a, long long b, long long &x, long long &y) {
     y = x1 - y1 * (a / b);
     return g;
 }
-
+```
 
 # Code for Fenwick Tree or BIT
+```cpp
 class FenwickTree {
 public:
     int n;
@@ -1571,9 +1610,10 @@ public:
         if (r + 1 < n) update(r + 1, -val);
     }
 };
-
+```
 
 # Cartesian Tree to perform RMQ
+```cpp
 class CartesianTree {
 public:
     int n, root;
@@ -1656,9 +1696,10 @@ public:
         return up[u][0];
     }
 };
-
+```
 
 # Trie for getting Min/Max Xors
+```cpp
 class Trie_Xor {
 public:
     struct Node {
@@ -1795,9 +1836,11 @@ public:
         return true;
     }
 };
+```
 
 
 # Euler Tour Technique
+```cpp
 // Euler Tour Technique
 // Used for flattening a tree and finding the subtree for any node.
 class EulerTour {
@@ -1844,13 +1887,16 @@ public:
         return {tin[u], tout[u]};
     }
 };
-
+```
 
 # Random Number Generator
+```cpp
 mt19937_64 RNG(chrono::steady_clock::now().time_since_epoch().count());
+```
 
 
 # Smallest Prime Factor Sieve
+```cpp
 vector<int> spf;
 void spf_SieveOfEratosthenes(int n) {
     spf = vector<int>(n + 1);
@@ -1865,3 +1911,4 @@ void spf_SieveOfEratosthenes(int n) {
         }
     }
 }
+```
