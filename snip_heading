@@ -1,4 +1,5 @@
-Generic skeleton
+# Generic skeleton
+
 // <-------------------------------------------Libraries------------------------------------>
 #include <iostream>
 #include <cstdio>
@@ -290,7 +291,7 @@ int32_t main() {
 }
 
 
-Precomputing nCr when I need to return modulo mod answer
+# Precomputing nCr when I need to return modulo mod answer
 vector<Mint> fact, invfact;
 int fact_computed = 0;
 
@@ -330,7 +331,7 @@ Mint multi(int x, const vector<int> &y) {
 }
 
 
-To find the nCr
+# To find the nCr
 // nCr function
 // Time Complexity : O(r)
 long long nCr(int n, int r) {
@@ -343,7 +344,7 @@ long long nCr(int n, int r) {
 }
 
 
-Disjoint Set Union (Union-Find)
+# Disjoint Set Union (Union-Find)
 // Disjoint Set Union (Union - Find)
 // Helps join two groups and find the parent (representative) of a group fast.
 class DSU {
@@ -424,7 +425,7 @@ public:
 };
 
 
-Modular Int Operations
+# Modular Int Operations
 /*
     Modular Arithmetic Operations (ModInt)
     Source :
@@ -528,8 +529,7 @@ void genComb(int n) {
     }
 }
 
-
-Snippet for debugging
+# Snippet for debugging
 // <------------------------------------Debugging Macros for Conditional Output during Development---------------------------------->
 #ifndef ONLINE_JUDGE
     #define debug(x)        cerr << #x << " = " << (x) << "\n"
@@ -556,7 +556,7 @@ Snippet for debugging
 // <------------------------------------------------------Debugging ends --------------------------------------------------------->
 
 
-Modular Functions
+# Modular Functions
 long long mod_pow(long long a, long long b, long long m = mod) {
     long long res = 1;
     while (b) {
@@ -626,7 +626,7 @@ template<typename K, typename V>
 using umap = unordered_map<K, V, custom_hash>;
 
 
-For problems dealing with mex
+# For problems dealing with mex
 struct Mex {
     set<int> missing;               // Stores all potential mex values
     unordered_map<int, int> freq;   // Frequency of each element in the current set
@@ -656,7 +656,7 @@ struct Mex {
 };
 
 
-Kruskal's Minimum Spanning Tree
+# Kruskal's Minimum Spanning Tree
 /*
 Kruskal's Minimum Spanning Tree Using DSU
 For the edges vector : Create a vector<vector<int>> and just push back 
@@ -697,7 +697,7 @@ int kruskalMST(int vertexCount, vector<vector<int>> &edges) {
 }
 
 
-Sieve of Eratosthenes
+# Sieve of Eratosthenes
 vector<bool> prime;
 void SieveOfEratosthenes(long long n) {
     prime = vector<bool>(n + 1, true);
@@ -711,7 +711,7 @@ void SieveOfEratosthenes(long long n) {
 }
 
 
-PBDS Template
+# PBDS Template
 // Policy Based Data Structures (PBDS)
 #undef int // disables above #define int ll temporarily
 #include <ext/pb_ds/assoc_container.hpp>
@@ -751,7 +751,7 @@ Quick usage notes:
 */
 
 
-Miller Rabin Primality Test
+# Miller Rabin Primality Test
 // Miller-Rabin Primality Test [Deterministic for 64-bit numbers]
 // Time Complexity: O(log n)
 int binpower(int base, int e, int mod) { 
@@ -799,7 +799,7 @@ bool MillerRabin(int n) { // returns true if n is prime, else returns false.
 }
 
 
-Mobius Function Computation
+# Mobius Function Computation
 // Möbius Function Computation
 // Time Complexity: O(n log log n)
 void computeMobius(int n, vector<int>& mu) {
@@ -822,7 +822,7 @@ void computeMobius(int n, vector<int>& mu) {
 }
 
 
-Segment Tree for sum queries
+# Segment Tree for sum queries
 // Segment Tree (Range Sum)
 // Used to perform Range Sum Queries, range add updates using lazy propogation.
 class SegmentTree_Sum {
@@ -893,7 +893,7 @@ public:
 };
 
 
-2nd Segment Tree
+# 2nd Segment Tree
 class SegmentTree_Sum {
 public:
     int n;
@@ -983,7 +983,7 @@ public:
 };
 
 
-Segment Tree for min queries
+# Segment Tree for min queries
 // Segment Tree (Range Min)
 // Used to perform Range Min Queries and updates.
 class SegmentTree_Min {
@@ -1035,7 +1035,7 @@ public:
 };
 
 
-Segment Tree for max queries
+# Segment Tree for max queries
 // Segment Tree (Range Max)
 // Used to perform Range Max Queries and updates.
 class SegmentTree_Max {
@@ -1097,7 +1097,7 @@ public:
 };
 
 
-Segment Tree for xor queries
+# Segment Tree for xor queries
 // Segment Tree (Range XOR)
 // Used to perform Range XOR Queries and updates.
 class SegmentTree_XOR {
@@ -1147,7 +1147,7 @@ public:
 };
 
 
-Segment Tree for gcd queries
+# Segment Tree for gcd queries
 // Segment Tree (Range Gcd)
 // Used to perform Range Gcd Queries and updates.
 class SegmentTree_GCD {
@@ -1199,7 +1199,7 @@ public:
 };
 
 
-Segment Tree for lcm queries
+# Segment Tree for lcm queries
 // Segment Tree (Range Lcm)
 // Used to perform Range Lcm Queries and updates.
 class SegmentTree_LCM {
@@ -1256,7 +1256,7 @@ public:
 };
 
 
-Segment Tree for or queries
+# Segment Tree for or queries
 // Segment Tree (Range OR)
 // Used to perform Range OR Queries and updates.
 class SegmentTree_OR {
@@ -1306,7 +1306,7 @@ public:
 };
 
 
-Segment Tree for and queries
+# Segment Tree for and queries
 // Segment Tree (Range AND)
 // Used to perform Range AND Queries and updates.
 class SegmentTree_AND {
@@ -1356,7 +1356,7 @@ public:
 };
 
 
-Used to perform maximum subarray sum queries with point updates.
+# Used to perform maximum subarray sum queries with point updates.
 // Segment Tree (Maximum Subarray Sum)
 // Used to perform maximum subarray sum queries with point updates.
 class SegmentTree_MaxSubarray {
@@ -1436,13 +1436,7 @@ public:
     }
 };
 
-
-Usaco Guide Input Output
-freopen("input.in", "r", stdin);
-freopen("output.out", "w", stdout);
-
-
-Feasible LCM Template to avoid overflow.
+# Feasible LCM Template to avoid overflow.
 long long modpow(long long a, long long e, long long mod = 1e9 + 7) {
     long long r = 1;
     while (e) {
@@ -1483,7 +1477,7 @@ long long lcm_mod(const vector<long long>& arr, long long mod = 1e9 + 7) {
 }
 
 
-Extended GCD/Euclidean Algorithm
+# Extended GCD/Euclidean Algorithm
 // Extended GCD/Euclidean Algorithm :
 // Its used to :
 //  1. Find x, y for eqns where => ax + by = gcd(a, b)
@@ -1504,7 +1498,7 @@ long long extendedGCD(long long a, long long b, long long &x, long long &y) {
 }
 
 
-Code for Fenwick Tree or BIT
+# Code for Fenwick Tree or BIT
 class FenwickTree {
 public:
     int n;
@@ -1579,7 +1573,7 @@ public:
 };
 
 
-Cartesian Tree to perform RMQ
+# Cartesian Tree to perform RMQ
 class CartesianTree {
 public:
     int n, root;
@@ -1664,7 +1658,7 @@ public:
 };
 
 
-Trie for getting Min/Max Xors
+# Trie for getting Min/Max Xors
 class Trie_Xor {
 public:
     struct Node {
@@ -1745,7 +1739,7 @@ public:
 };
 
 
-Trie for getting Strings
+# Trie for getting Strings
 class Trie_String {
 public:
     struct Node {
@@ -1803,7 +1797,7 @@ public:
 };
 
 
-Euler Tour Technique
+# Euler Tour Technique
 // Euler Tour Technique
 // Used for flattening a tree and finding the subtree for any node.
 class EulerTour {
@@ -1852,11 +1846,11 @@ public:
 };
 
 
-Random Number Generator
+# Random Number Generator
 mt19937_64 RNG(chrono::steady_clock::now().time_since_epoch().count());
 
 
-Smallest Prime Factor Sieve
+# Smallest Prime Factor Sieve
 vector<int> spf;
 void spf_SieveOfEratosthenes(int n) {
     spf = vector<int>(n + 1);
